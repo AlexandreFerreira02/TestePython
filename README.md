@@ -1,21 +1,17 @@
-# TestePython
+# Aula 19/08/2025
 
-class Carro:
-    def __init__(self):
-        self.motor_ligado = True
+while True:
+    a = int(input('Número: '))
+    numero = int(input('Número: '))
+    # while deixa em loop
+    while a < numero:
+        print(a)
+        a += 1
+    else:
+        print('Chegou no', numero)
 
-    def ligar(self):
-        if self.motor_ligado:
-            print('Vrum-vrum')
-
-class Motor:
-    def __init__(self, modelo):
-        self.modelo = modelo
-        self.carro = Carro()
-
-    def funcionando(self):
-        print(f'{self.modelo} está ligado')
-        self.carro.ligar()
-
-c1 = Motor('Carro')
-c1.funcionando()
+    continuar = input('continuar (s/n): ') .lower() .strip()
+    if continuar not in ('s','sim'): 
+            break
+# continue = continua o que estiver presente no while      
+# break encerra o loop do while
